@@ -62,7 +62,7 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 #include <UQ_Results.h>
 #include <InputWidgetParameters.h>
 #include <RandomVariablesContainer.h>
-#include <GoogleAnalytics.h>
+//#include <GoogleAnalytics.h>
 
 #include <DakotaResultsSampling.h>
 #include <SimCenterPreferences.h>
@@ -468,7 +468,7 @@ bool copyPath(QString sourceDir, QString destinationDir, bool overWriteDirectory
 
 void MainWindow::onRunButtonClicked() {
 
-    GoogleAnalytics::ReportLocalRun();
+    //GoogleAnalytics::ReportLocalRun();
 
     //
     // get program & input file from fem widget
@@ -770,7 +770,7 @@ void MainWindow::onRemoteRunButtonClicked(){
           return;
     }
 
-    GoogleAnalytics::ReportDesignSafeRun();
+    //GoogleAnalytics::ReportDesignSafeRun();
 
     //
     // get program & input file from fem widget

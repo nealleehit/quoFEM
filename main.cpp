@@ -41,9 +41,10 @@ UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 #include <QFile>
 #include <QTime>
 #include <QTextStream>
-#include <GoogleAnalytics.h>
+//#include <GoogleAnalytics.h>
 #include <QDir>
 #include <QStandardPaths>
+#include <QDebug>
 
  // customMessgaeOutput code from web:
  // https://stackoverflow.com/questions/4954140/how-to-redirect-qdebug-qwarning-qcritical-etc-output
@@ -87,8 +88,8 @@ int main(int argc, char *argv[])
     QCoreApplication::setOrganizationName("SimCenter");
     QCoreApplication::setApplicationVersion("2.1.0");
     //GoogleAnalytics::SetTrackingId("UA-121636495-1");
-    GoogleAnalytics::StartSession();
-    GoogleAnalytics::ReportStart();
+    //GoogleAnalytics::StartSession();
+    //GoogleAnalytics::ReportStart();
 
     //
     // set up logging of output messages for user debugging
@@ -153,6 +154,6 @@ int main(int argc, char *argv[])
   //
 
   int res = app.exec();
-  GoogleAnalytics::EndSession();
+  //GoogleAnalytics::EndSession();
   return res;
 }
